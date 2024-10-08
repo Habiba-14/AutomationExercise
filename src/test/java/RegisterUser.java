@@ -8,12 +8,12 @@ public class RegisterUser extends Start {
     public void SignUp() {
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
         driver.findElement(By.name("name")).sendKeys("Habiba");
-        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habeba@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habebaa111111@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).click();
 
         //enter account info page
 
-        driver.findElement(By.name("title")).click();
+        driver.findElement(By.id("id_gender1")).click();
         driver.findElement(By.id("password")).sendKeys("Habiba@2002");
 
         //selecting from a drop box
@@ -45,5 +45,22 @@ public class RegisterUser extends Start {
 
         //click on create account
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/form/button")).click();
+
+        //verify text
+       String actualText= driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/h2/b")).getText();
+        System.out.println(actualText);
+        //click on continue
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();
+
+    }
+
+    @Test
+    public void DeleteAcc(){
+        SignUp();
+        driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")).click();
+        String actualText= driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/h2/b")).getText();
+        System.out.println(actualText);
+        //click on continue
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();
     }
 }

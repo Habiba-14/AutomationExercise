@@ -7,8 +7,8 @@ public class VerifyProducts extends Start{
 //        4. Click on 'Products' button
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[2]/a")).click();
 //        5. Verify user is navigated to ALL PRODUCTS page successfully
-       String url = driver.getCurrentUrl();
-        System.out.println(url);
+            String url = driver.getCurrentUrl();
+            System.out.println(url);
 //        6. The products list is visible
 
 //        7. Click on 'View Product' of first product

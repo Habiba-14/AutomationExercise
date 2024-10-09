@@ -1,14 +1,15 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class RegisterUser extends Start {
     @Test
-    public void SignUp() {
+    public void SignUp(WebDriver driver) {
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
         driver.findElement(By.name("name")).sendKeys("Habiba");
-        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habebaa111111@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habebaaaafffinalfinal@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).click();
 
         //enter account info page
@@ -55,8 +56,8 @@ public class RegisterUser extends Start {
     }
 
     @Test
-    public void DeleteAcc(){
-        SignUp();
+    public void DeleteAcc(WebDriver driver){
+        SignUp(driver);
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")).click();
         String actualText= driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/h2/b")).getText();
         System.out.println(actualText);

@@ -1,10 +1,11 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class ValidLogin extends Start{
 
     @Test
-    public void Login(){
+    public void Login(WebDriver driver) {
         //Click on 'Signup / Login' button
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
 
@@ -21,9 +22,11 @@ public class ValidLogin extends Start{
         //Verify that 'Logged in as username' is visible
 //       String actualText= driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[10]/a/text()")).getText();
 //        System.out.println(actualText);
-
+    }
+    @Test
+            public void DeleteAfterLogin() {
         //Click 'Delete Account' button
-            driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")).click();
+        driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[5]/a")).click();
 
 
         //Verify that 'ACCOUNT DELETED!' is visible
@@ -32,6 +35,9 @@ public class ValidLogin extends Start{
         //click on continue
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div/div/a")).click();
 
+    }
+
+
 
     }
-}
+

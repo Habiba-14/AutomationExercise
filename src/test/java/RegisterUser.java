@@ -9,7 +9,7 @@ public class RegisterUser extends Start {
     public void SignUp(WebDriver driver) {
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
         driver.findElement(By.name("name")).sendKeys("Habiba");
-        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habebaaaafffinalfinal@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habibahanafi@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).click();
 
         //enter account info page

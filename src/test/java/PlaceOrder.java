@@ -3,6 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class PlaceOrder extends Start {
     RegisterUser user = new RegisterUser();
     @Test
@@ -35,7 +37,11 @@ public class PlaceOrder extends Start {
 //        13. Click 'Proceed To Checkout' button
     driver.findElement(By.xpath("//*[@id=\"do_action\"]/div[1]/div/div/a")).click();
 //        14. Verify Address Details and Review Your Order
-
+    WebElement ulElement = driver.findElement(By.id("address_delivery"));
+    List<WebElement> liElements = ulElement.findElements(By.tagName("li"));
+    for (WebElement li : liElements) {
+        System.out.println("address details"+li.getText());
+    }
 //        15. Enter description in comment text area and click 'Place Order'
     driver.findElement(By.name("message")).sendKeys("text text text");
     driver.findElement(By.xpath("//*[@id=\"cart_items\"]/div/div[7]/a")).click();

@@ -5,11 +5,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 public class RegisterUser extends Start {
+
+
     @Test
     public void SignUp(WebDriver driver) {
         driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a")).click();
         driver.findElement(By.name("name")).sendKeys("Habiba");
-        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habibahanafi@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/input[3]")).sendKeys("habibahanafi11@gmail.com");
         driver.findElement(By.xpath("//*[@id=\"form\"]/div/div/div[3]/div/form/button")).click();
 
         //enter account info page

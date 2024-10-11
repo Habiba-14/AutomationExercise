@@ -8,6 +8,7 @@ public class Start {
     WebDriver driver;
     @BeforeTest
     public void OpenBrowser(){
+
         WebDriverManager.chromedriver().setup();
          driver = new ChromeDriver();
         driver.get("https://automationexercise.com/");

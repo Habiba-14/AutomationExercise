@@ -5,3 +5,4 @@ IntelliJ IDEA
 Maven
 Selenium WebDriver
 TestNG
+![image](https://github.com/user-attachments/assets/48002382-a91e-43b6-8dff-34d7f433da6a)
